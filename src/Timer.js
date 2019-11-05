@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
-import "./Timer";
 
 const Timer = () => {
     const [seconds, setSeconds] = useState(60);
@@ -16,7 +15,7 @@ const Timer = () => {
     }
 
     useEffect(() => {
-        let interval = null;
+        let interval;
         if(isActive){
             interval = setInterval(() => {
                 setSeconds(seconds => seconds - 1);
